@@ -28,7 +28,7 @@
           v-model="leitors.telefone"
           placeholder="Telefone"
         /><br />
-        <input type="file" @change="onFileSelected" /><br />
+        <input type="file" /><br />
         <input type="submit" value="Salvar" />
       </form>
     </div>
@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import axios from "axios";
+//import axios from "axios";
 export default {
   data() {
     return {
@@ -45,24 +45,15 @@ export default {
         genero: null,
         bairro: null,
         telefone: null,
-        foto: null,
         estado: "on",
+        file: null,
       },
     };
   },
   methods: {
     postData(e) {
       e.preventDefault();
-      axios
-        .post("http://localhost:8000/api/leitors/store", this.leitors)
-        .then((response) => {
-          console.log(response);
-        })
-        .catch((e) => console.log(e));
-    },
-    onFileSelected(e) {
-      this.foto = e.target.files[0]
-      console.log(e)
+     
     },
   },
 };
