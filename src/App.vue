@@ -10,6 +10,10 @@ import Leitors from './components/Leitors.vue'
 export default {
   name: 'App',
 
+  components: {
+    Leitors,
+  },
+
 }
 </script>
 

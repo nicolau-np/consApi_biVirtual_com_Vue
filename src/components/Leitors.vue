@@ -2,6 +2,28 @@
   <div>
     <h1>Primeira Pagina</h1>
     <h4>Hello World</h4>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Foto</th>
+                <th>Nome</th>
+                <th>Genero</th>
+                <th>Telefone</th>
+                <th>Bairro</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="leitor in leitors" :key="leitor.id">
+                <td></td>
+                <td>{{ leitor.pessoa.nome }}</td>
+                <td>{{ leitor.pessoa.genero }}</td>
+                <td>{{ leitor.telefone }}</td>
+                <td>{{ leitor.bairro }}</td>
+            </tr>
+        </tbody>
+    </table>
   </div>
 </template>
 
@@ -13,9 +35,6 @@ export default {
     return {
       leitors: [],
     };
-  },
-  components: {
-    Leitors,
   },
   created: function () {
     this.getLeitors();
