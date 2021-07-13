@@ -6,7 +6,7 @@
 
 <script>
 import Leitors from './components/Leitors.vue'
-
+import axios from 'axios'
 export default {
   name: 'App',
   components: {
