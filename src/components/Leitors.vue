@@ -10,8 +10,11 @@
          <span class="field">Gênero: </span> {{leitor.pessoa.genero}}<br/> 
          <span class="field">Telefone: </span> {{leitor.telefone}}<br/> 
          <span class="field">Bairro: </span> {{leitor.bairro}}<br/>
-         <a href="">Editar</a>&nbsp;&nbsp;<a href="">Eliminar</a>
+         <div class="operators"> 
+             <a href="" class="link primary">Editar</a>&nbsp;&nbsp;&nbsp;<a href="" class="link danger">Eliminar</a>
         </div>
+         </div>
+         
     </div>
 
 
@@ -45,6 +48,9 @@ export default {
 </script>
 
 <style scoped>
+.operators{
+    padding-top:10px;
+}
 .img_profile{
     height: 5em;
     width: 40%;
@@ -62,6 +68,21 @@ export default {
     padding:10px;
     border: 1px solid #ccc;
     display: block;
+    margin-bottom: 10px;
+}
+.link{
+    font-weight: bold;
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 4px;
+}
+.primary{
+    background-color: blue;
+}
+
+.danger{
+    background-color: red;
 }
 </style>
 
