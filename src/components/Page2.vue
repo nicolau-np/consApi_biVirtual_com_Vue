@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'page2',
   
 }
 </script>
