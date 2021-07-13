@@ -10,12 +10,10 @@
           v-model="nome"
           placeholder="Nome"
         /><br />
-        <input
-          type="text"
-          name="genero"
-          v-model="genero"
-          placeholder="Genero"
-        /><br />
+        <select name="genero" v-model="genero">
+            <option value="M">M</option>
+            <option value="F">F</option>
+        </select><br />
         <input
           type="text"
           name="bairro"
