@@ -29,8 +29,9 @@ export default {
   },
   methods:{
       postData(e){
+          console.warn(this.leitors)
           e.preventDefault();
-          
+
       }
   }
 };
