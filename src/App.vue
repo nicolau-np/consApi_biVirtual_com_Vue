@@ -11,7 +11,18 @@ export default {
   name: 'App',
   components: {
     Leitors
+  },
+  created: function(){
+    this.getLeitors();
+  },
+  methods: {
+    getLeitors(){
+      axios.get("http://localhost:8000/api/leitors").then((response)=>{
+          console.log(response)
+      }).catch((e)=>console.log(e));
+    }
   }
+
 }
 </script>
 
