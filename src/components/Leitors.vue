@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Leitores Angolanos</h1>
+    <h3>Leitores Angolanos</h3>
 
     <div class="card" v-for="leitor in leitors" :key="leitor.id">
         <img scr="" class="img_profile">

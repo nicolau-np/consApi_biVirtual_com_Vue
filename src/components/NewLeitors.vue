@@ -1,6 +1,10 @@
 <template>
 <div>
-      Novo Leitor
+      <h3>Novo Leitor</h3>
+
+      <div class="form">
+
+      </div>
 </div>
 </template>
 
