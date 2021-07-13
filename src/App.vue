@@ -1,22 +1,15 @@
 <template>
   <div>
-   <Leitors/>
+    hello
+    <router-view> </router-view>
   </div>
 </template>
 
 <script>
-import Leitors from './components/Leitors.vue'
-
 export default {
-  name: 'App',
-
-  components: {
-    Leitors,
-  },
-
-}
+  name: "App",
+};
 </script>
 
 <style>
-
 </style>
