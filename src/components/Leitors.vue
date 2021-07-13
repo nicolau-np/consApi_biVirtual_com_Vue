@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1>Primeira Pagina</h1>
-    <h4>Hello World</h4>
+    <h1>Leitores Angolanos</h1>
 
     <div class="card" v-for="leitor in leitors" :key="leitor.id">
         <img scr="" class="img_profile">
