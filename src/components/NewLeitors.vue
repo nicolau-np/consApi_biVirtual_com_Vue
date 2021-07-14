@@ -28,8 +28,7 @@
         /><br />
         <input type="file" @change="setFile" /><br />
         <input type="submit" value="Salvar" />
-
-        <img src="http://localhost:8000/img_leitores/zFp7YrxvMUJbgZVHFhEeKZ3uHqcCDYnBxKKYuh2Y.jpg" width="100px" height="100px">
+        
       </form>
     </div>
   </div>
