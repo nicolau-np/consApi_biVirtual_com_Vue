@@ -13,7 +13,7 @@
          <span class="field">Telefone: </span> {{leitor.telefone}}<br/> 
          <span class="field">Bairro: </span> {{leitor.bairro}}<br/>
          <div class="operators"> 
-             <router-link to="/editleitors" class="link primary">Editar</router-link>&nbsp;&nbsp;&nbsp;<router-link to="" class="link danger">Eliminar</router-link>
+             <router-link :to="'/editleitors/'+leitor.id" class="link primary">Editar</router-link>&nbsp;&nbsp;&nbsp;<router-link to="" class="link danger">Eliminar</router-link>
         </div>
          </div>
          

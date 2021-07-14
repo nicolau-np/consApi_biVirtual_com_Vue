@@ -3,7 +3,7 @@
     <h3>Editar Leitor</h3>
 
     <div class="form">
-      <form @submit="send" method="POST" enctype="multipart/form-data">
+      <form @submit="update" method="POST" enctype="multipart/form-data">
         <input
           type="text"
           name="nome"
@@ -49,12 +49,12 @@ export default {
     };
   },
   created() {
-    this.getLeitor(this.id);
+    this.getLeitor();
   },
   methods: {
-    getLeitor(id) {
+    getLeitor() {
       axios
-        .get("http://localhost:8000/api/leitors/show/" + id)
+        .get("http://localhost:8000/api/leitors/show/" + this.id)
         .then((response) => {
             this.leitor = response.data.data;
             //console.log(response.data.data);
@@ -62,6 +62,7 @@ export default {
             this.genero = this.leitor.pessoa.genero
             this.telefone = this.leitor.telefone
             this.bairro = this.leitor.bairro
+            this.estado = this.leitor.estado
         })
         .catch((e) => console.log(e));
     },
@@ -70,8 +71,26 @@ export default {
       this.file = files[0];
     },
 
-    send(e) {
+    update(e) {
       e.preventDefault();
+      let data = new FormData();
+      data.append("foto", this.file);
+      data.append("nome", this.nome);
+      data.append("genero", this.genero);
+      data.append("telefone", this.telefone);
+      data.append("bairro", this.bairro);
+      data.append("estado", "on");
+      console.log(data)
+      /*axios
+        .put("http://localhost:8000/api/leitors/update/"+this.id, data, {
+          headers: {
+            "Content-type": "multipart/form-data",
+          },
+        })
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((e) => console.log(e));*/
     },
   },
 };
