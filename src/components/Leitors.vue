@@ -3,9 +3,10 @@
     <h3>Leitores Angolanos</h3>
 
     <div class="card" v-for="leitor in leitors" :key="leitor.id">
-        <img v-if="leitor.pessoa.foto!=null" v-bind:scr="'http://localhost:8000/'+leitor.pessoa.foto"  alt="img_profile" class="img_profile"/>
+      <img v-if="leitor.pessoa.foto== null" src="https://lh3.googleusercontent.com/proxy/cOf0PuHx7_lvARgC2CJTy9I9lmnXM3MZPoWA7cSH5XOIUGSpLqJxx8hXjFG3QNbyErGIpf8Sdl-RHZKSNFXyc7O-XR7TZyO0tE_U71HD5MAkivFQqm-u4TkaQiYVXm05Jir7Ioi7dQWHi5I" width="100px" height="100px">
+      <img v-else :scr="'http://localhost:8000/'+leitor.pessoa.foto"  alt="img_profile" width="100px" height="100px"/>
         
-        <img v-else-if="leitor.pessoa.foto== null" src="https://lh3.googleusercontent.com/proxy/cOf0PuHx7_lvARgC2CJTy9I9lmnXM3MZPoWA7cSH5XOIUGSpLqJxx8hXjFG3QNbyErGIpf8Sdl-RHZKSNFXyc7O-XR7TZyO0tE_U71HD5MAkivFQqm-u4TkaQiYVXm05Jir7Ioi7dQWHi5I" width="100px" height="100px">
+        
         <div class="description">
          <span class="field">Nome: </span> {{leitor.pessoa.nome}}<br/>
          <span class="field">Gênero: </span> {{leitor.pessoa.genero}}<br/> 
