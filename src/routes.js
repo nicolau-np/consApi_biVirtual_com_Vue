@@ -4,6 +4,7 @@ import Router from 'vue-router'
 
 import Leitors from './components/Leitors'
 import NewLeitors from './components/NewLeitors'
+import EditLeitors from './components/EditLeitors'
 
 vue.use(Router)
 
@@ -17,6 +18,11 @@ const routes = [
         name: 'newleitors',
         path: '/newleitors',
         component: NewLeitors
+    },
+    {
+        name: 'editleitors',
+        path: '/editleitors',
+        component: EditLeitors
     }
 ]
 
