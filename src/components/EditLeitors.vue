@@ -57,7 +57,11 @@ export default {
         .get("http://localhost:8000/api/leitors/show/" + id)
         .then((response) => {
             this.leitor = response.data.data;
-            console.log(response.data.data);
+            //console.log(response.data.data);
+            this.nome = this.leitor.pessoa.nome
+            this.genero = this.leitor.pessoa.genero
+            this.telefone = this.leitor.telefone
+            this.bairro = this.leitor.bairro
         })
         .catch((e) => console.log(e));
     },
