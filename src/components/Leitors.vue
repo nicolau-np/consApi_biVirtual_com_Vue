@@ -3,8 +3,8 @@
     <h3>Leitores Angolanos</h3>
 
     <div class="card" v-for="leitor in leitors" :key="leitor.id">
-        <img v-if="leitor.pessoa.foto!=null" :scr="'http://localhost:8000/'+leitor.pessoa.foto"  alt="img_profile">
-        <img v-else-if="leitor.pessoa.foto==null" :scr="'http://localhost:8000/assets/img/photo none.png'"  alt="none_photo">
+        <img v-if="leitor.pessoa.foto!=null" :scr="'http://localhost:8000/'+leitor.pessoa.foto"  alt="img_profile"/>
+        <img v-else-if="leitor.pessoa.foto==null" :scr="'http://localhost:8000/assets/img/photo none.png'"  alt="none_photo"/>
         <div class="description">
          <span class="field">Nome: </span> {{leitor.pessoa.nome}}<br/>
          <span class="field">Gênero: </span> {{leitor.pessoa.genero}}<br/> 
