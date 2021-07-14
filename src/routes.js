@@ -21,7 +21,7 @@ const routes = [
     },
     {
         name: 'editleitors',
-        path: '/editleitors',
+        path: '/editleitors/:id',
         component: EditLeitors
     }
 ]

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Novo Leitor</h3>
+    <h3>Editar Leitor</h3>
 
     <div class="form">
       <form @submit="send" method="POST" enctype="multipart/form-data">
@@ -34,18 +34,33 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
+      id: this.$route.params.id,
       nome: null,
       genero: null,
       bairro: null,
       telefone: null,
       estado: "on",
       file: null,
+      leitor: [],
     };
   },
+  created() {
+    this.getLeitor(this.id);
+  },
   methods: {
+    getLeitor(id) {
+      axios
+        .get("http://localhost:8000/api/leitors/show/" + id)
+        .then((response) => {
+            this.leitor = response.data.data;
+            console.log(response.data.data);
+        })
+        .catch((e) => console.log(e));
+    },
     setFile(e) {
       var files = e.target.files;
       this.file = files[0];
