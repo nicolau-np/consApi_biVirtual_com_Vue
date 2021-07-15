@@ -80,8 +80,8 @@ export default {
       data.append("telefone", this.telefone);
       data.append("bairro", this.bairro);
       data.append("estado", "on");
-      console.log(data)
-      /*axios
+      
+      axios
         .put("http://localhost:8000/api/leitors/update/"+this.id, data, {
           headers: {
             "Content-type": "multipart/form-data",
@@ -90,7 +90,7 @@ export default {
         .then((response) => {
           console.log(response.data);
         })
-        .catch((e) => console.log(e));*/
+        .catch((e) => console.log(e));
     },
   },
 };
