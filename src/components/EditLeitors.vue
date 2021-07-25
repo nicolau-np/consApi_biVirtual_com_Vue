@@ -43,7 +43,7 @@ export default {
       genero: null,
       bairro: null,
       telefone: null,
-      estado: "on",
+      estado: 'on',
       file: null,
       leitor: [],
     };
@@ -62,7 +62,6 @@ export default {
             this.genero = this.leitor.pessoa.genero
             this.telefone = this.leitor.telefone
             this.bairro = this.leitor.bairro
-            this.estado = this.leitor.estado
         })
         .catch((e) => console.log(e));
     },
@@ -79,7 +78,7 @@ export default {
       data.append("genero", this.genero);
       data.append("telefone", this.telefone);
       data.append("bairro", this.bairro);
-      data.append("estado", "on");
+      data.append("estado", this.estado);
       
       axios
         .put("http://localhost:8000/api/leitors/update/"+this.id, data, {
@@ -88,9 +87,11 @@ export default {
           },
         })
         .then((response) => {
-          console.log(response.data);
+          console.log(response);
         })
-        .catch((e) => console.log(e));
+        .catch((e) => console.log('error aqui '+e));
+
+        
     },
   },
 };
